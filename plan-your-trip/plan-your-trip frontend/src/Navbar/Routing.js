@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import About from './About';
 import Contact from './Contact';
 import BookingForm from '../BookingForm/BookingForm';
+import Profile from './Profile';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function Routing(){
@@ -31,12 +32,16 @@ export default function Routing(){
       <Route exact path="/Welcome">
         <Welcome/>
       </Route>
-      <Route exact path="/SignIn">
-        <Login/>
+      <Route exact path="/Profile">
+        <Profile/>
+        {/* <div>Here is the profile page</div> */}
       </Route>
-      <Route exact path="/SignUp">
+      {/* <Route exact path="/SignIn">
         <Login/>
-      </Route>
+      </Route> */}
+      {/* <Route exact path="/SignUp">
+        <Login/>
+      </Route> */}
     </Switch>
   </Router>
   );

@@ -20,6 +20,7 @@ export default function Form(){
               <input type="text" disabled value="cityval"/>
               <input type="password" placeholder="Driving Licence Number" />
               <input type="number" placeholder="Number of travellers"/>
+              <input type="text" placeholder="Please provide your current Address" />
               <div className="chooseacar">Choose a car : </div>
               <select id="cars" required>
                 <option value="Selectacar">Select a Car</option>
@@ -39,7 +40,9 @@ export default function Form(){
                   <option value="Jeep">Jeep</option>
                 </optgroup>
               </select>
-              <p>Date of plan</p>
+              <p>FROM:</p>
+              <input type="date" placeholder="date of trip" />
+              <p>TO:</p>
               <input type="date" placeholder="date of trip" />
             </div>
             <button className="booknowbook">Book Now</button>

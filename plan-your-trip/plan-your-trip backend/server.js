@@ -1,4 +1,5 @@
 require("dotenv").config();
+const express = require("express");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const session_secret = "newton";
@@ -20,7 +21,9 @@ mongoose.connection.once("open", () => {
 
 //Models
 require("./models/User");
+require("./models/Details");
 const User = mongoose.model("User");
+const Details = mongoose.model("Details");
 
 const app = require("./app");
 app.use(
@@ -77,3 +80,36 @@ app.post("/login", async (req, res) => {
     res.status(401).send({ err: "Email does not match" });
   }
 });
+
+
+app.get("/logout", (req, res)=> {
+  if(!isNullOrUndefined(req.session)) {
+      // destroy the session
+      req.session.destroy(() => {
+          res.sendStatus(200);
+      });
+
+  } else {
+      res.sendStatus(200);
+  }
+});
+
+app.post("/Booking",async(req,res)=>{
+  const {name,age,phoneNumber,licence,noOfTravellers,fromDate,toDate}=req.body;
+  if(!name || !age || !phoneNumber || !licence || !noOfTravellers || !fromDate ||!toDate){
+    res.status(401).send("Error");
+  }
+  else{
+    const newUserDetails = new Details({
+      name,
+      age,
+      phoneNumber,
+      licence,
+      noOfTravellers,
+      fromDate,
+      toDate,
+    });
+    await newUserDetails.save();
+    res.status(201).send("Your Trip Booked Successfully");
+  }
+})

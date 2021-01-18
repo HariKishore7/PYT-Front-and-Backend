@@ -6,6 +6,7 @@ function NavBar() {
       <div className="nav">
         <a href="/" className="logoname">Road Trip</a>
         <a href="/Welcome" className="name login"><button className="btn">Logout</button></a>
+        <a href="/Profile" className="name profile"><button className="btn">User Profile</button></a>
         <a href="/Contact" className="name contact"><button className="btn">Contact</button></a>
         <a href="/About" className="name about"><button className="btn">About</button></a>
         <a href="/" className="name home"><button className="btn">Home</button></a>
