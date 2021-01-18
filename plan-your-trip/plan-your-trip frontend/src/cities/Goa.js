@@ -5,7 +5,7 @@ import NavBar from '../Navbar/Navbar';
 import Footer from '../footer/Footer';
 import {religiousImages,touristImages,beachImages} from "../CityImages/GoaImg";
 
-function Navbars(){
+function IntroImage(){
     return(
         <div>
             <img className="goa" alt="bgimage" src="https://images.thrillophilia.com/image/upload/s--AdMFxeHB--/c_fill,dpr_1.0,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/039/872/original/1607412230_shutterstock_1301320006.jpg.jpg"></img>
@@ -24,16 +24,17 @@ function Body(){
     );
 }
 
-export default class Goa extends React.Component{
-    render(){
-        return(
-            <div>
-                <NavBar/>
-                <Navbars/>
-                <Body/>
-                <Description religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
-                <Footer/>
-            </div>            
-        );
-    }
+export default function Goa(){
+    let firsttab="Goa Beaches";
+    let secondtab="Goa Party places";
+    let thirdtab="Goa Views";
+    return(
+        <div>
+            <NavBar/>
+            <IntroImage/>
+            <Body/>
+            <Description firsttab={firsttab} secondtab={secondtab} thirdtab={thirdtab} religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
+            <Footer/>
+        </div>            
+    );
 }

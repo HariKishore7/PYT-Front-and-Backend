@@ -5,7 +5,7 @@ import NavBar from '../Navbar/Navbar';
 import Footer from '../footer/Footer';
 import {religiousImages,touristImages,beachImages} from "../CityImages/KeralaImg";
 
-function Navbars(){
+function IntroImage(){
     return(
         <div>
             <img className="kerala" alt="bgimage" src="https://images.thrillophilia.com/image/upload/s--UU1d3-Sv--/c_fill,dpr_1.0,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/098/848/original/1552472870_houseboat8.png.jpg"></img>
@@ -24,13 +24,16 @@ function Body(){
     );
 }
 
-export default function Hyderabad(){
+export default function Kerala(){
+    let firsttab="Kerala Religious";
+    let secondtab="Kerala Visitor places";
+    let thirdtab="Kerala Famous places";
     return(
         <div>
             <NavBar/>
-            <Navbars/>
+            <IntroImage/>
             <Body/>
-            <Description religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
+            <Description firsttab={firsttab} secondtab={secondtab} thirdtab={thirdtab} religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
             <Footer/>
         </div>            
     );

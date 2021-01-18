@@ -4,7 +4,7 @@ import Description from '../Components/Description';
 import NavBar from '../Navbar/Navbar';
 import Footer from '../footer/Footer';
 import {religiousImages,touristImages,parkImages} from "../CityImages/HydImg";
-function Navbars(){
+function IntroImage(){
     return(
         <div>
             <img className="hyd" alt="bgimage" src="https://www.wallpapertip.com/wmimgs/44-446351_hyderabad-wallpaper.jpg"></img>
@@ -24,12 +24,15 @@ function Body(){
 }
 
 export default function Hyderabad(){
+    let firsttab="Hyd Religious";
+    let secondtab="Hyd Visitor places";
+    let thirdtab="Hyd Famous places";
     return(
         <div>
             <NavBar/>
-            <Navbars/>
+            <IntroImage/>
             <Body/>
-            <Description religiousImages={religiousImages} touristImages={touristImages} beachImages={parkImages}/>
+            <Description firsttab={firsttab} secondtab={secondtab} thirdtab={thirdtab} religiousImages={religiousImages} touristImages={touristImages} beachImages={parkImages}/>
             <Footer/>
         </div>            
     );

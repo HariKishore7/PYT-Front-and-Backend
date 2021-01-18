@@ -5,7 +5,7 @@ import NavBar from '../Navbar/Navbar';
 import Footer from '../footer/Footer';
 import {religiousImages,touristImages,beachImages} from "../CityImages/VizagImg";
 
-function Navbars(){
+function IntroImage(){
     return(
         <div>
             <img className="vizag" alt="vizag" src="https://2.bp.blogspot.com/-Buywxcs0Lkc/Uq1shnU8_EI/AAAAAAAAALE/G6VspF4QQ6g/s1600/vizag-kilasagiri-wallpapers2.jpg"></img>
@@ -25,12 +25,15 @@ function Body(){
 }
 
 export default function Vizag(){
+    let firsttab="Vizag Beaches";
+    let secondtab="Vizag visitor places";
+    let thirdtab="Vizag views";
     return(
         <div>
             <NavBar/>
-            <Navbars/>
+            <IntroImage/>
             <Body/>
-            <Description religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
+            <Description firsttab={firsttab} secondtab={secondtab} thirdtab={thirdtab} religiousImages={religiousImages} touristImages={touristImages} beachImages={beachImages}/>
             <Footer/>
         </div>            
     );

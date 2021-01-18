@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import BookingForm from '../BookingForm/BookingForm';
 import Profile from './Profile';
+import Cars from '../finalpages/Cars';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function Routing(){
@@ -32,9 +33,11 @@ export default function Routing(){
       <Route exact path="/Welcome">
         <Welcome/>
       </Route>
+      <Route exact path="/Cars">
+        <Cars/>
+      </Route>
       <Route exact path="/Profile">
         <Profile/>
-        {/* <div>Here is the profile page</div> */}
       </Route>
       {/* <Route exact path="/SignIn">
         <Login/>

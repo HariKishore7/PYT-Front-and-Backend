@@ -29,9 +29,9 @@ function Description(props) {
   return (
     <div className="description">
         <div className="btnpart">
-            <button className="buttons" onClick={showOnlyReligiousPlaces}>Religious</button>
-            <button className="buttons" onClick={showOnlyParks}>Parks</button>
-            <button className="buttons" onClick={showOnlyTouristPlaces}>Tourist</button><br></br>
+            <button className="buttons" onClick={showOnlyReligiousPlaces}>{props.firsttab}</button>
+            <button className="buttons" onClick={showOnlyParks}>{props.secondtab}</button>
+            <button className="buttons" onClick={showOnlyTouristPlaces}>{props.thirdtab}</button><br></br>
         </div>
         {showReligiousPlaces ? <Images imageData={props.religiousImages} /> : null}
         {showTouristPlaces ? <Images imageData={props.touristImages} /> : null}
