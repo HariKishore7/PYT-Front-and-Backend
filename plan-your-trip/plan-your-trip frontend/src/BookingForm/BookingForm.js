@@ -2,7 +2,40 @@ import react from 'react';
 import './BookingForm.css';
 import NavBar from '../Navbar/Navbar';
 import Footer from '../footer/Footer';
-import logo from './FormImg.svg'
+import logo from './FormImg.svg';
+
+function CostSlider(){
+  // var slider1 = document.getElementById("myRange1");
+  // var slider2 = document.getElementById("myRange2");
+  // var hours = document.getElementById("hours");
+  // var price1 = document.getElementById("price1");
+  // price1.innerHTML = slider1.value*65;
+  // var price2 = document.getElementById("price2");
+  // price2.innerHTML = slider2.value*1560;
+  // var days = document.getElementById("days");
+  // hours.innerHTML = slider1.value;
+  // days.innerHTML = slider2.value;
+
+  // slider1.oninput = function() {
+  //     hours.innerHTML = this.value;
+  //     price1.innerHTML = this.value*65;
+  // }
+  // slider2.oninput = function() {
+  //     days.innerHTML = (this.value);
+  //     price2.innerHTML = this.value*1560;
+  // }
+  return(
+      <div class="slidecontainerbf">
+          <h1>Calculate the cost of  trip</h1>
+          <input type="range" min="10" max="96" value="24" className="slider" id="myRange1"></input>
+          <p>Hours: <span id="hours"></span></p>
+          <p>Price: <span id="price1"></span></p>
+          <input type="range" min="5" max="15" value="1" className="slider" id="myRange2"></input>
+          <p>Days: <span id="days"></span></p>
+          <p>Price: <span id="price2">0</span></p>
+      </div>
+  )
+}
 
 export default function Form(){
   return(
@@ -10,7 +43,8 @@ export default function Form(){
     <NavBar/>
       {/* <img className="sideimg" src="https://thepointsguy.com/wp-content/themes/tpg-2016/client/images/tpg-weekly-update-man-left.svg" alt="sideimg"></img> */}
       <img className="sideimgbook" src={logo} alt="sideimg"></img>
-        <div className="form-containerbook sign-in-containerbook">
+        <CostSlider/>
+        <div className="form-containerbook">
           <form action="#">
             <h1>Fill the Form</h1>
             <div className="inputfieldsbook">
