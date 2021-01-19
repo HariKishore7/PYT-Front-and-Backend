@@ -4,7 +4,7 @@ import './Contact.css';
 function Contact() {
     return (
         <div className="Contact">
-        <iframe className="glocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.2358083851462!2d81.59402982918901!3d16.729683999279768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQzJzQ2LjkiTiA4McKwMzUnNDAuNSJF!5e0!3m2!1sen!2sin!4v1610213678047!5m2!1sen!2sin" title="Location" width="1685px" height="550" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe className="glocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.2358083851462!2d81.59402982918901!3d16.729683999279768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQzJzQ2LjkiTiA4McKwMzUnNDAuNSJF!5e0!3m2!1sen!2sin!4v1610213678047!5m2!1sen!2sin" title="Location" width="1515px" height="550" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <h1 className="contactus">CONTACT <span>US</span></h1>
         <p className="contactpara">Please feel free to call us for Holiday Packages, car rental and for any other detail</p>       
         <div className="contactdetails">

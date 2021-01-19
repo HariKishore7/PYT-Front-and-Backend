@@ -4,21 +4,21 @@ body{
 }
 
 .abtimg{
-    width: 1680px;
+    width: 1515px;
 }
-.sidebar{
+/* .sidebar{
     display: flex;
     flex-direction: row;
-}
+} */
 
 .whoweare{
     color: #f36b63
 }
-.carimg{
+/* .carimg{
     width: 700px;
     height: 600px;
     float: right;
-}
+} */
 
 .mission{
     font-weight: bold;
@@ -73,7 +73,7 @@ body{
     background-color: #e03e35;
     padding: 5px;
     border-radius: 10px;
-    width: 450px;
+    width: 400px;
     margin: 15px;
 }
 
